@@ -1,9 +1,13 @@
 /*FONT*/
 @font-face 
 {
-    font-family: 'Prumo';
-    src: url('/font/Prumo\ Deck\ SemiBold.otf') format('otf');
+    font-family: 'Prumo Deck SemiBold';
+    src: 
+        url('/font/Prumo Deck SemiBold.woff2') format('woff2'),
+        url('/font/Prumo Deck SemiBold.woff') format('woff'),
+        url('/font/Prumo Deck SemiBold.ttf') format('truetype');
 }
+
 
 body
 {
@@ -13,7 +17,7 @@ body
 
 .container 
 {
-    font-family: 'Prumo';
+    font-family: 'Prumo Deck SemiBold';
     display: flex;
     flex-direction: column;
     justify-content: center;

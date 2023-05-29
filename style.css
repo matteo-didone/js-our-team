@@ -1,11 +1,8 @@
 /*FONT*/
 @font-face 
 {
-    font-family: 'Prumo Deck SemiBold';
-    src: 
-        url('/font/Prumo Deck SemiBold.woff2') format('woff2'),
-        url('/font/Prumo Deck SemiBold.woff') format('woff'),
-        url('/font/Prumo Deck SemiBold.ttf') format('truetype');
+    font-family: 'Open Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 }
 
 
@@ -13,11 +10,12 @@ body
 {
     color: rgba(112,106,100,255);
     background-color: rgba(245,245,241,255);
+    width: 100%;
 }
 
 .container 
 {
-    font-family: 'Prumo Deck SemiBold';
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;

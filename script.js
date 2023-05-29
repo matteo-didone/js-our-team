@@ -1,9 +1,3 @@
-// Using the provided data, create an array of objects to represent the team members.
-// Each member is characterized by the following information: name, role, and photo.
-// MILESTONE 0:
-// Create the array of objects with the given information.
-// MILESTONE 1:
-// Print to the console, for each team member, the name, role, and the photo string.
 // MILESTONE 2:
 // Print the same information on the DOM as strings.
 // BONUS 1:
@@ -72,3 +66,4 @@ for (let i = 0; i < teamMembers.length; i++)
     // Print a line to separate each member's information.
     console.log("_________________________");
 }
+

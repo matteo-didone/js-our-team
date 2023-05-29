@@ -1,0 +1,62 @@
+# Directories
+.vscode/
+node_modules/
+out/
+dist/
+bin/
+
+# Files
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Compiled files
+*.class
+*.dll
+*.exe
+*.o
+*.pyc
+*.so
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# ESLint
+.eslintcache
+.eslintignore
+
+# Prettier
+.prettierignore
+.prettiercache
+
+# EditorConfig
+.editorconfig
+
+# Visual Studio Code settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Jest
+coverage/

@@ -1,14 +1,81 @@
+/*FONT*/
+@font-face 
+{
+    font-family: 'Prumo';
+    src: url('/font/Prumo\ Deck\ SemiBold.otf') format('otf');
+}
+
 body
 {
-    color: #404040;
+    color: rgba(112,106,100,255);
     background-color: rgba(245,245,241,255);
 }
 
-
 .container 
 {
+    font-family: 'Prumo';
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.title 
+{
+    margin-top: 50px;
+}
+
+.subtitle 
+{
+    width: 550px;
+    height: 65px;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.team-members
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+}
+
+.card-img
+{
+    margin-bottom: -10px;
+}
+
+.card-info
+{
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.card-info h4 
+{
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.card-info p 
+{
+    font-size: 18px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: normal;
 }

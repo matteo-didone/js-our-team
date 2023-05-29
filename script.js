@@ -1,10 +1,3 @@
-// MILESTONE 2:
-// Print the same information on the DOM as strings.
-// BONUS 1:
-// Convert the photo string into an actual image.
-// BONUS 2:
-// Organize individual members into cards.
-
 // Create an array of literal objects to represent the team members.
 const teamMembers = 
 [
@@ -67,33 +60,57 @@ for (let i = 0; i < teamMembers.length; i++)
     console.log("_________________________");
 }
 
-// Print to the DOM, for each team member, the name, role, and the photo string.
+// Create a container element to hold the team members' cards
+const teamContainer = document.querySelector(".team-members");
+
+// Loop through the teamMembers array
 for (let i = 0; i < teamMembers.length; i++) 
 {
-    // Create variable to store the current member.
-    const member = teamMembers[i];
+    // Create a new card element
+    const card = document.createElement("div");
+    // Add the card class to the card element
+    card.classList.add("card");
 
-    // Get the card element corresponding to the current team member
-    const card = document.querySelectorAll(".card")[i];
+    // Set the card's id attribute based on the team member's role
+    card.id = teamMembers[i].role.toLowerCase().replace(" ", "-");
 
-    // Get the card-info div element corresponding to the current team member
-    const cardInfo = card.querySelector(".card-info");
+    // Create the card image element
+    const cardImage = document.createElement("div");
+    // Add the card image class to the card image element
+    cardImage.classList.add("card-img");
 
-    // Update the card's HTML content with the team member's information
-    cardInfo.querySelector("h4").textContent = member.name;
-    cardInfo.querySelector("p").textContent = member.role;
+    // Create the card info element
+    const cardInfo = document.createElement("div");
+    // Add the card info class to the card info element
+    cardInfo.classList.add("card-info");
 
-    // Create an image element and set its source to the team member's photo
+    // Create the heading element for the team member's name
+    const heading = document.createElement("h4");
+    // Set the heading's text content to the team member's name
+    heading.textContent = teamMembers[i].name;
+
+    // Create the paragraph element for the team member's role
+    const paragraph = document.createElement("p");
+    // Set the paragraph's text content to the team member's role
+    paragraph.textContent = teamMembers[i].role;
+
+    // Append the heading and paragraph elements to the card info
+    cardInfo.appendChild(heading);
+    cardInfo.appendChild(paragraph);
+
+    // Append the card image and card info to the card
+    card.appendChild(cardImage);
+    card.appendChild(cardInfo);
+
+    // Append the card to the team container
+    teamContainer.appendChild(card);
+
+    // Create an image element for the team member's photo
     const image = document.createElement("img");
+    // Set the image's src and alt attributes
+    image.src = teamMembers[i].photo;
+    image.alt = teamMembers[i].name;
 
-    // Set the image's source to the team member's photo
-    image.src = member.photo;
-
-    // Set the image's alt attribute to the team member's name
-    image.alt = member.name;
-
-    // Append the image element to the card's card-img div
-    card.querySelector(".card-img").appendChild(image);
+    // Append the image to the card image element
+    cardImage.appendChild(image);
 }
-
-

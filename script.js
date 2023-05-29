@@ -56,3 +56,19 @@ const teamMembers =
         photo: "barbara-ramos-graphic-designer.jpg"
     }
 ]
+
+// Print to the console, for each team member, the name, role, and the photo string.
+for (let i = 0; i < teamMembers.length; i++) 
+{
+    // Create variable to store the current member.
+    const member = teamMembers[i];
+
+    // Print the current member's information to the console using for in loop
+    for (let key in member) 
+    {
+        // Print the current member's information to the console.
+        console.log(key + ": " + member[key]);
+    }
+    // Print a line to separate each member's information.
+    console.log("_________________________");
+}
